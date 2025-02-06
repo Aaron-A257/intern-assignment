@@ -97,14 +97,35 @@ Eg.
 
 ## Running services
 ### Instructions to run the UI
-_enter details here!_
+```
+yarn # or npm, to install dependencies
+yarn start # to run server
+```
+
+ if backend server is giving a cors-header requirement add these commands to dist/index.js
+```
+    app.use((req, res, next) => {
+    res
+        .header('Access-Control-Allow-Origin',
+            '*');
+    res
+        .header('Access-Control-Allow-Methods',
+            'GET, POST, PUT, DELETE');
+    res
+        .header('Access-Control-Allow-Headers',
+            'Origin, X-Requested-With,Content-Type, Accept');
+    next();
+});
+```
+
 
 ### Add a demonstration video 
-_make a demonstration video showcasing frontend not longer than 2-3min, just explain what you have done!_
+
+https://drive.google.com/file/d/1pvxUme5o1KEYaDbIOS09udUsBYk1fwFD/view?usp=drive_link
 
 ### Instructions to run the backend API
 ```bash
 cd backend
 yarn # or npm, to install dependencies
-yarn start # or npm start, to...start?
+yarn start # or npm start, to...start? 
 ```
